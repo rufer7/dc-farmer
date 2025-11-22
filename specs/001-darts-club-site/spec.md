@@ -85,6 +85,8 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 - **FR-014**: Text content MUST use semantic HTML structure (headings hierarchical, lists, sections, landmarks for accessibility).
 - **FR-015**: No user authentication required; all content is publicly viewable (assumption for static site scope).
 - **FR-016**: Member listings (Active, Passive, Committee) MUST present members in an accessible horizontal card carousel: each card shows name, membership category/role, optional photo; carousel MUST support keyboard navigation (tab + arrow keys), swipe on touch devices, and provide a fallback stacked list layout on very narrow viewports (<360px) or when JS disabled.
+- **FR-017**: A persistent footer MUST appear on all pages containing: (a) copyright notice in the form "© DC Farmer <current year>" auto-updated annually, (b) an internal link labeled "Impressum" to legal/contact info, and (c) an external link labeled "Swiss Darts Association" opening in a new tab with rel="noopener noreferrer"; footer MUST maintain dark theme contrast and logical keyboard focus order.
+- **FR-018**: A Sponsoring page MUST present: (a) introductory section explaining sponsorship value, (b) minimum three tiers (Bronze, Silver, Gold) each with list of benefits, (c) responsive grid of sponsor logos (alt text; placeholder if missing), (d) a prominent call-to-action button labeled "Become a Sponsor" linking to existing sponsoring dossier, and (e) disclaimer on logo usage rights; page MUST follow dark theme with #45e783 accent and be accessible (semantic headings, keyboard focusable CTA).
 
 ### Key Entities _(include if feature involves data)_
 
@@ -93,6 +95,7 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 - **Team**: Represents a club team. Attributes: name, type (E-Darts | Steel-Darts), description/highlights, roster (Member references).
 - **Member**: Represents a club participant. Attributes: name, membershipCategory (Active | Passive | Committee), optional role (e.g., Captain, Treasurer), optional short bio.
 - **CommitteeRole**: Mapping between role title and Member (derived view from Member data where membershipCategory=Committee).
+- **Sponsor**: Represents supporting organization/individual. Attributes: name, tier (Bronze | Silver | Gold | Other), logo (optional), website URL (optional), short description, benefits list reference.
 
 ## Success Criteria _(mandatory)_
 
