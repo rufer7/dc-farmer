@@ -22,6 +22,10 @@ Follow basic web accessibility standards (WCAG 2.1 Level A minimum). Use semanti
 
 Code must be clean, well-organized, and easy to update. Use clear file structure, consistent naming conventions, and comments where necessary. Keep dependencies minimal.
 
+### VI. Security
+
+The website must be served exclusively over HTTPS. Implement a strong Content Security Policy (CSP) to prevent XSS and other injection attacks. Never commit secrets, API keys, or sensitive data to the repository. All external resources must use secure protocols.
+
 ## Technical Standards
 
 ### File Structure
