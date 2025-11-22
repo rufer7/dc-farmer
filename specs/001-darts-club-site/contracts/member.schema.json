@@ -5,13 +5,17 @@
   "type": "object",
   "required": ["id", "displayName", "active"],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
-    "displayName": {"type": "string", "minLength": 2, "maxLength": 80},
-    "role": {"type": "string", "minLength": 1, "maxLength": 60},
-    "committeeRoleId": {"type": "string", "pattern": "^[a-z0-9-]+$"},
-    "teams": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9-]+$"}, "uniqueItems": true},
-    "image": {"type": "string", "pattern": "^images/members/.+\.(webp|png)$"},
-    "active": {"type": "boolean"}
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "displayName": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "role": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "committeeRoleId": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "teams": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "uniqueItems": true
+    },
+    "image": { "type": "string", "pattern": "^images/members/.+.(webp|png)$" },
+    "active": { "type": "boolean" }
   },
   "additionalProperties": false
 }
