@@ -84,6 +84,7 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 - **FR-013**: Event and news lists MUST gracefully handle absence of items by displaying clear empty-state messages.
 - **FR-014**: Text content MUST use semantic HTML structure (headings hierarchical, lists, sections, landmarks for accessibility).
 - **FR-015**: No user authentication required; all content is publicly viewable (assumption for static site scope).
+- **FR-016**: Member listings (Active, Passive, Committee) MUST present members in an accessible horizontal card carousel: each card shows name, membership category/role, optional photo; carousel MUST support keyboard navigation (tab + arrow keys), swipe on touch devices, and provide a fallback stacked list layout on very narrow viewports (<360px) or when JS disabled.
 
 ### Key Entities _(include if feature involves data)_
 
