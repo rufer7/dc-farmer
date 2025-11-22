@@ -1,0 +1,19 @@
+[
+  {
+    "id": "training-2026-01-10",
+    "title": "Weekly Training",
+    "date": "2026-01-10",
+    "startTime": "19:00",
+    "location": "Clubhouse A",
+    "type": "training",
+    "teamIds": ["team-edarts"]
+  },
+  {
+    "id": "tournament-2026-02-05",
+    "title": "Winter Open",
+    "date": "2026-02-05",
+    "location": "Regional Hall",
+    "type": "tournament",
+    "description": "Open bracket tournament for regional players"
+  }
+]

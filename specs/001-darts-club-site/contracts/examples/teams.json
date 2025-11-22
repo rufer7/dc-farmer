@@ -1,0 +1,15 @@
+[
+  {
+    "id": "team-edarts",
+    "name": "E-Darts Team",
+    "discipline": "edarts",
+    "division": "Regional League",
+    "members": ["john-d"]
+  },
+  {
+    "id": "team-steeldarts",
+    "name": "Steel Darts Team",
+    "discipline": "steeldarts",
+    "members": ["sara-k"]
+  }
+]

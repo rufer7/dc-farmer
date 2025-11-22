@@ -1,0 +1,13 @@
+[
+  {
+    "id": "president",
+    "title": "President",
+    "order": 0
+  },
+  {
+    "id": "training-coordinator",
+    "title": "Training Coordinator",
+    "order": 1,
+    "description": "Schedules practice sessions"
+  }
+]
