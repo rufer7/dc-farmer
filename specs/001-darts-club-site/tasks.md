@@ -25,68 +25,68 @@ Polish phase depends on completion of US1–US3 core tasks.
 
 ## Phase 1: Setup
 
-- [ ] T001 Initialize repository structure: create `public/` base folders (css, js, data, images, news) per plan
-- [ ] T002 Add project README section for feature (append to existing `README.md` with feature overview)
+- [x] T001 Initialize repository structure: create `public/` base folders (css, js, data, images, news) per plan
+- [x] T002 Add project README section for feature (append to existing `README.md` with feature overview)
 
 ## Phase 2: Foundational Infrastructure
 
-- [ ] T003 Create base stylesheet `public/css/base.css` (variables, typography, layout, breakpoints)
-- [ ] T004 [P] Add theme/components stylesheet `public/css/theme.css` (cards, grid, buttons)
-- [ ] T005 Implement carousel component stylesheet `public/css/components/carousel.css`
-- [ ] T006 Create placeholder HTML pages (about, clubhouse, team-edarts, team-steeldarts, club-active, club-passive, club-committee, sponsoring, impressum) under `public/`
-- [ ] T007 Populate initial member dataset `public/data/members.json`
-- [ ] T008 Populate initial team dataset `public/data/teams.json`
-- [ ] T009 Populate committee roles dataset `public/data/committee-roles.json`
-- [ ] T010 Implement data loader module `public/js/data-loader.js` (fetch & render events, news teasers, members, teams)
-- [ ] T011 Create events dataset `public/data/events.json` (sample future + past exclusion)
-- [ ] T012 Create sponsors dataset `public/data/sponsors.json`
-- [ ] T013 Add dynamic year module `public/js/year.js`
-- [ ] T014 Add carousel interaction module `public/js/carousel.js` (keyboard arrows, Home/End)
-- [ ] T015 Add initial news article markdown `public/news/2026-03-15--spring-open-2026.md`
-- [ ] T016 Insert CSP meta tag in all HTML pages (security baseline)
+- [x] T003 Create base stylesheet `public/css/base.css` (variables, typography, layout, breakpoints)
+- [x] T004 [P] Add theme/components stylesheet `public/css/theme.css` (cards, grid, buttons)
+- [x] T005 Implement carousel component stylesheet `public/css/components/carousel.css`
+- [x] T006 Create placeholder HTML pages (about, clubhouse, team-edarts, team-steeldarts, club-active, club-passive, club-committee, sponsoring, impressum) under `public/`
+- [x] T007 Populate initial member dataset `public/data/members.json`
+- [x] T008 Populate initial team dataset `public/data/teams.json`
+- [x] T009 Populate committee roles dataset `public/data/committee-roles.json`
+- [x] T010 Implement data loader module `public/js/data-loader.js` (fetch & render events, news teasers, members, teams)
+- [x] T011 Create events dataset `public/data/events.json` (sample future + past exclusion)
+- [x] T012 Create sponsors dataset `public/data/sponsors.json`
+- [x] T013 Add dynamic year module `public/js/year.js`
+- [x] T014 Add carousel interaction module `public/js/carousel.js` (keyboard arrows, Home/End)
+- [x] T015 Add initial news article markdown `public/news/2026-03-15--spring-open-2026.md`
+- [x] T016 Insert CSP meta tag in all HTML pages (security baseline)
 
 ## Phase 3: User Story 1 – Landing Highlights (P1)
 
 Independent Test Criteria: Landing shows next 3 future events and 3 newest news articles with fallbacks; keyboard navigation works on page; empty states graceful.
 
-- [ ] T017 [US1] Add landing page `public/index.html` structure (sections: upcoming events, latest news)
-- [ ] T018 [P] [US1] Implement events rendering function in `public/js/data-loader.js` (filter future, sort, take 3)
-- [ ] T019 [P] [US1] Implement news teasers extraction (frontmatter parse or JSON placeholder) in `public/js/data-loader.js`
-- [ ] T020 [US1] Add empty-state messaging markup logic (events/news) in `public/js/data-loader.js`
-- [ ] T021 [US1] Accessibility pass for landing (heading order, landmarks) in `public/index.html`
-- [ ] T022 [US1] Performance quick check: ensure total CSS+JS < size budgets (manual note in README)
+- [x] T017 [US1] Add landing page `public/index.html` structure (sections: upcoming events, latest news)
+- [x] T018 [P] [US1] Implement events rendering function in `public/js/data-loader.js` (filter future, sort, take 3)
+- [x] T019 [P] [US1] Implement news teasers extraction (frontmatter parse or JSON placeholder) in `public/js/data-loader.js`
+- [x] T020 [US1] Add empty-state messaging markup logic (events/news) in `public/js/data-loader.js`
+- [x] T021 [US1] Accessibility pass for landing (heading order, landmarks) in `public/index.html`
+- [x] T022 [US1] Performance quick check: ensure total CSS+JS < size budgets (manual note in README)
 
 ## Phase 4: User Story 2 – Explore Teams (P2)
 
 Independent Test Criteria: Each team page loads roster, team name/type, highlight section; fallback when roster empty.
 
-- [ ] T023 [US2] Add roster render logic (E-Darts) in `public/js/data-loader.js`
-- [ ] T024 [P] [US2] Add roster render logic (Steel Darts) in `public/js/data-loader.js`
-- [ ] T025 [US2] Add team highlight placeholder sections to `public/team-edarts.html` & `public/team-steeldarts.html`
-- [ ] T026 [US2] Empty roster fallback messaging (per team) in `public/js/data-loader.js`
+- [x] T023 [US2] Add roster render logic (E-Darts) in `public/js/data-loader.js`
+- [x] T024 [P] [US2] Add roster render logic (Steel Darts) in `public/js/data-loader.js`
+- [x] T025 [US2] Add team highlight placeholder sections to `public/team-edarts.html` & `public/team-steeldarts.html`
+- [x] T026 [US2] Empty roster fallback messaging (per team) in `public/js/data-loader.js`
 
 ## Phase 5: User Story 3 – Club Information (P3)
 
 Independent Test Criteria: About, Clubhouse, Active, Passive, Committee pages display structured content or fallbacks independent of other pages.
 
-- [ ] T027 [US3] Populate About page content blocks in `public/about.html` (mission/history placeholders)
-- [ ] T028 [P] [US3] Populate Clubhouse page content blocks in `public/clubhouse.html` (facilities placeholders)
-- [ ] T029 [US3] Implement active members list render in `public/js/data-loader.js`
-- [ ] T030 [P] [US3] Implement passive members list render in `public/js/data-loader.js`
-- [ ] T031 [US3] Implement committee roles + member mapping render in `public/js/data-loader.js`
-- [ ] T032 [US3] Add empty-state fallback for committee roles without assigned members in `public/js/data-loader.js`
+- [x] T027 [US3] Populate About page content blocks in `public/about.html` (mission/history placeholders)
+- [x] T028 [P] [US3] Populate Clubhouse page content blocks in `public/clubhouse.html` (facilities placeholders)
+- [x] T029 [US3] Implement active members list render in `public/js/data-loader.js`
+- [x] T030 [P] [US3] Implement passive members list render in `public/js/data-loader.js`
+- [x] T031 [US3] Implement committee roles + member mapping render in `public/js/data-loader.js`
+- [x] T032 [US3] Add empty-state fallback for committee roles without assigned members in `public/js/data-loader.js`
 
 ## Phase 6: Polish & Cross-Cutting
 
-- [ ] T033 Add alt text review across all `public/*.html` and image references
-- [ ] T034 [P] Add external link `rel="noopener noreferrer"` where needed (e.g., sponsor links) in HTML files
-- [ ] T035 Optimize sample images (add placeholder `public/images/placeholders/member.webp`) and document sizes in `quickstart.md`
-- [ ] T036 Add initial Lighthouse manual run notes to `README.md`
-- [ ] T037 Add initial Pa11y manual run script placeholder `tests/accessibility/pa11y.config.json`
-- [ ] T038 Add JSON schema validation instructions to `quickstart.md`
-- [ ] T039 Security review checklist addition to `README.md` (CSP present, no inline scripts/styles)
-- [ ] T040 Final accessibility sweep: keyboard navigation carousel test note in `README.md`
-- [ ] T041 Prepare GitHub Actions workflow draft (not enabled) `/.github/workflows/quality.yml` (placeholder)
+- [x] T033 Add alt text review across all `public/*.html` and image references
+- [x] T034 [P] Add external link `rel="noopener noreferrer"` where needed (e.g., sponsor links) in HTML files
+- [x] T035 Optimize sample images (add placeholder `public/images/placeholders/member.webp`) and document sizes in `quickstart.md`
+- [x] T036 Add initial Lighthouse manual run notes to `README.md`
+- [x] T037 Add initial Pa11y manual run script placeholder `tests/accessibility/pa11y.config.json`
+- [x] T038 Add JSON schema validation instructions to `quickstart.md`
+- [x] T039 Security review checklist addition to `README.md` (CSP present, no inline scripts/styles)
+- [x] T040 Final accessibility sweep: keyboard navigation carousel test note in `README.md`
+- [x] T041 Prepare GitHub Actions workflow draft (not enabled) `/.github/workflows/quality.yml` (placeholder)
 
 ## MVP Definition
 

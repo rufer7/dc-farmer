@@ -93,6 +93,52 @@ python -m http.server 8080
 # Navigate to http://localhost:8080/public/
 ```
 
+### Quality Checks
+
+#### Lighthouse Performance Testing
+Run Lighthouse manually in Chrome DevTools:
+1. Open Chrome DevTools (F12)
+2. Go to Lighthouse tab
+3. Select categories: Performance, Accessibility, Best Practices, SEO
+4. Click "Analyze page load"
+
+**Performance Targets:**
+- Performance Score: > 90
+- Accessibility Score: > 90
+- Best Practices Score: > 90
+- First Contentful Paint (FCP): < 1.5s
+- Largest Contentful Paint (LCP): < 2.5s
+- Total Blocking Time (TBT): < 200ms
+
+#### Accessibility Testing with Pa11y
+```bash
+# Install Pa11y CLI
+npm install -g pa11y-ci
+
+# Start local server
+python3 -m http.server 8080
+
+# Run Pa11y tests
+pa11y-ci --config tests/accessibility/pa11y.config.json
+```
+
+#### Security Review Checklist
+- [x] Content Security Policy (CSP) meta tag present in all HTML pages
+- [x] No inline scripts or styles (all external)
+- [x] All scripts loaded as ES modules with `type="module"`
+- [x] External links use `rel="noopener noreferrer"` (when applicable)
+- [x] No hardcoded secrets or API keys
+- [x] HTTPS enforced by GitHub Pages
+- [x] Input sanitization via `escapeHtml()` function in data-loader.js
+- [x] Safe JSON parsing with error handling
+
+#### Keyboard Navigation Testing
+- [x] All interactive elements accessible via Tab key
+- [x] Focus indicators visible on all focusable elements
+- [x] Carousel supports Arrow keys, Home, and End keys
+- [x] Skip links or logical tab order present
+- [x] No keyboard traps
+
 ### Documentation
 See `specs/001-darts-club-site/` for complete specification:
 - `plan.md` - Technical implementation plan

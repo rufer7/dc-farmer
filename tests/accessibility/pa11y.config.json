@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "timeout": 10000,
+    "wait": 2000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    },
+    "standard": "WCAG2AA",
+    "runners": ["axe"],
+    "ignore": [
+      "color-contrast"
+    ]
+  },
+  "urls": [
+    "http://localhost:8080/public/index.html",
+    "http://localhost:8080/public/about.html",
+    "http://localhost:8080/public/clubhouse.html",
+    "http://localhost:8080/public/team-edarts.html",
+    "http://localhost:8080/public/team-steeldarts.html",
+    "http://localhost:8080/public/club-active.html",
+    "http://localhost:8080/public/club-passive.html",
+    "http://localhost:8080/public/club-committee.html",
+    "http://localhost:8080/public/sponsoring.html",
+    "http://localhost:8080/public/impressum.html"
+  ]
+}
