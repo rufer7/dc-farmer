@@ -5,5 +5,5 @@
 
 New website of darts club `DC Farmer`
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The new website is currently under construction and therefore not yet deployed.
