@@ -5,7 +5,7 @@
 
 ## Summary
 
-Static, mobile-first dark themed website (accent #45e783) for DC Farmer hosted on GitHub Pages with no backend or database. All content (events, news, members, sponsors) embedded as static assets (HTML/Markdown/JSON). Minimal JavaScript limited to member carousel, dynamic year in footer, optional client-side filtering. Security via CSP meta tag, no secrets. Accessibility (WCAG 2.1 A) and performance (fast initial paint, <2s landing) enforced through lean assets.
+Static, mobile-first dark themed website (accent #45e783) for DC Farmer hosted on GitHub Pages with no backend or database. All content (events, news, members, sponsors) embedded as static assets (HTML/Markdown/JSON). Minimal JavaScript limited to member carousel, dynamic year in footer, optional client-side filtering. Security via CSP meta tag, no secrets. Accessibility (WCAG 2.1 A) and performance (fast initial paint, essential content under 3s) enforced through lean assets.
 
 ## Technical Context
 
@@ -15,19 +15,18 @@ Static, mobile-first dark themed website (accent #45e783) for DC Farmer hosted o
 **Testing**: Manual + automated via GitHub Actions (NEEDS CLARIFICATION: adopt Lighthouse CI & Pa11y).  
 **Target Platform**: GitHub Pages (static hosting) – modern browsers (last 2 versions Chrome/Firefox/Safari/Edge).
 **Project Type**: Static web site (single web project).
-**Performance Goals**: Landing LCP < 2.0s on 25Mbps, total initial JS < 8KB, CSS < 50KB, images optimized (WebP where possible).
+**Performance Goals**: Landing largest meaningful content (LCP proxy) < 3.0s on standard broadband (≈25Mbps); total initial JS < 8KB, CSS < 50KB, images optimized (WebP where possible).
 **Constraints**: No server logic; CSP via meta only; zero inline scripts/styles; responsive ≥320px; no third-party fonts.
 **Scale/Scope**: <= 30 content pages (initial ~10), events/news list < 50 items each, member cards < 50, sponsors < 30.
 
-NEEDS CLARIFICATION items:
-
-1. Testing automation stack (Lighthouse vs custom script).
-2. Content format choice for events/news (Markdown frontmatter vs pure JSON).
-3. Image optimization workflow (manual pre-processing vs future CI compression).
-4. Accessibility audit tooling (Pa11y, axe-core CLI).
-5. Carousel implementation details (scroll-snap only vs ARIA roving tabindex).
-6. Sponsor tiers benefits wording source (existing dossier vs new copy).
-7. CSP policy exact directives (allow data: images only?).
+Clarifications Resolved (see `research.md`):
+1. Testing automation: Lighthouse CI + Pa11y.
+2. Formats: Events JSON / News Markdown frontmatter.
+3. Images: Manual pre-processing (WebP primary).
+4. Accessibility audit: Pa11y CLI.
+5. Carousel pattern: Scroll-snap + keyboard arrows, native semantics.
+6. Sponsor benefits source: Dossier → `sponsors-tiers.md` planned.
+7. CSP directives: Meta tag with strict self policy + data: images.
 
 ## Constitution Check
 
@@ -40,7 +39,7 @@ NEEDS CLARIFICATION items:
 | Maintainability   | ✅         | Simple directories, no deps.                  |
 | Security          | ✅ (plan)  | CSP meta, HTTPS by Pages, no secrets.         |
 
-GATE STATUS: Proceed to Phase 0; NEEDS CLARIFICATION items must be resolved in `research.md`.
+GATE STATUS: All initial clarifications resolved (Phase 0 complete). Proceed with Phase 1/2 implementation.
 
 ## Project Structure
 

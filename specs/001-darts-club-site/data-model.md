@@ -55,15 +55,16 @@ Body: Markdown content (basic formatting only: headings, paragraphs, lists, link
 
 Public profile card for club member and/or team player.
 
-| Field           | Type     | Required | Constraints                     | Notes                   |
-| --------------- | -------- | -------- | ------------------------------- | ----------------------- |
-| id              | string   | yes      | slug unique                     | Based on name           |
-| displayName     | string   | yes      | 2-80 chars                      | Shown on card           |
-| role            | string   | no       | free text <= 60 chars           | e.g., "Player", "Coach" |
-| committeeRoleId | string   | no       | valid committee role id         | If on committee         |
-| teams           | string[] | no       | each valid team id              | Memberships             |
-| image           | string   | no       | path relative `images/members/` | WebP preferred          |
-| active          | boolean  | yes      | default true                    | For filtering           |
+| Field              | Type     | Required | Constraints                            | Notes                                     |
+| ------------------ | -------- | -------- | -------------------------------------- | ----------------------------------------- |
+| id                 | string   | yes      | slug unique                            | Based on name                             |
+| displayName        | string   | yes      | 2-80 chars                             | Shown on card                             |
+| membershipCategory | string   | yes      | enum: `active`, `passive`, `committee` | Primary classification                    |
+| active             | boolean  | yes      | default true                           | Convenience flag (true unless passive)    |
+| role               | string   | no       | free text <= 60 chars                  | e.g., "Player", "Coach"                   |
+| committeeRoleId    | string   | no       | valid committee role id                | Present if membershipCategory = committee |
+| teams              | string[] | no       | each valid team id                     | Memberships                               |
+| image              | string   | no       | path relative `images/members/`        | WebP preferred                            |
 
 ### CommitteeRole
 
@@ -94,15 +95,16 @@ Relationship: `members` references `Member.id` (redundant with Member.teams for 
 
 Commercial supporter entity.
 
-| Field   | Type   | Required | Constraints                      | Notes               |
-| ------- | ------ | -------- | -------------------------------- | ------------------- |
-| id      | string | yes      | slug unique                      | Based on name       |
-| name    | string | yes      | 2-120 chars                      | Display brand       |
-| tier    | string | yes      | enum: `gold`, `silver`, `bronze` | Sponsoring level    |
-| website | string | no       | valid URL                        | HTTPS preferred     |
-| logo    | string | no       | path `images/sponsors/`          | WebP + fallback PNG |
-| since   | string | no       | ISO year `YYYY`                  | Support start       |
-| blurb   | string | no       | 0-160 chars                      | Short visible text  |
+| Field    | Type     | Required | Constraints                      | Notes                                                                              |
+| -------- | -------- | -------- | -------------------------------- | ---------------------------------------------------------------------------------- |
+| id       | string   | yes      | slug unique                      | Based on name                                                                      |
+| name     | string   | yes      | 2-120 chars                      | Display brand                                                                      |
+| tier     | string   | yes      | enum: `gold`, `silver`, `bronze` | Sponsoring level                                                                   |
+| website  | string   | no       | valid URL                        | HTTPS preferred                                                                    |
+| logo     | string   | no       | path `images/sponsors/`          | WebP + fallback PNG                                                                |
+| since    | string   | no       | ISO year `YYYY`                  | Support start                                                                      |
+| blurb    | string   | no       | 0-160 chars                      | Short visible text                                                                 |
+| benefits | string[] | no       | each 2-120 chars                 | Optional inlined benefits (tier list); if absent, sourced from `sponsors-tiers.md` |
 
 ## Derived / Computed Values
 
@@ -160,6 +162,7 @@ Body paragraph text here.
 - Add `results` to Event (object with placements) in later phase.
 - Add `socialLinks` to Member (validate https only).
 - Add `contactEmail` to Sponsor (obfuscated or via mailto:).
+- Allow richer sponsor benefit metadata (e.g., icons) if moving to generated pages.
 
 ## Open Validation Tasks
 

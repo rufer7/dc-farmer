@@ -1,4 +1,4 @@
-# Feature Specification: Modern DC Farmer Website
+# Feature Specification: Modern DC Farmer Website (Aligned & Updated 2025-11-23)
 
 **Feature Branch**: `001-darts-club-site`  
 **Created**: 2025-11-22  
@@ -67,7 +67,7 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 
 ## Requirements _(mandatory)_
 
-### Functional Requirements
+### Functional Requirements (Updated for performance target & entity naming)
 
 - **FR-001**: Landing page MUST display the next 3 future events sorted ascending by start date; if fewer exist, show only available without placeholders.
 - **FR-002**: Landing page MUST display the 3 most recently published news articles with title, publish date, and teaser text.
@@ -78,7 +78,7 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 - **FR-007**: Layout MUST be responsive across mobile (>=320px), tablet, and desktop breakpoints without functional loss.
 - **FR-008**: All images MUST include descriptive alt text; missing images MUST fall back to placeholders.
 - **FR-009**: Site MUST avoid exposing secrets—no API keys, credentials, or private member data beyond names and roles.
-- **FR-010**: Pages MUST load essential content (above-the-fold) within 2 seconds on standard broadband (approx 25 Mbps) for first visit.
+- **FR-010**: Pages MUST load essential content (above-the-fold) within 3 seconds on standard broadband (approx 25 Mbps) for first visit.
 - **FR-011**: Site MUST implement security baseline: HTTPS-only hosting assumption, strong Content Security Policy (restrict inline scripts/styles, allow only required domains), and no mixed content.
 - **FR-012**: Navigation MUST allow reaching any primary page (Landing, About, Clubhouse, Teams, Club subpages) with max 2 clicks from any page.
 - **FR-013**: Event and news lists MUST gracefully handle absence of items by displaying clear empty-state messages.
@@ -88,20 +88,20 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 - **FR-017**: A persistent footer MUST appear on all pages containing: (a) copyright notice in the form "© DC Farmer <current year>" auto-updated annually, (b) an internal link labeled "Impressum" to legal/contact info, and (c) an external link labeled "Swiss Darts Association" opening in a new tab with rel="noopener noreferrer"; footer MUST maintain dark theme contrast and logical keyboard focus order.
 - **FR-018**: A Sponsoring page MUST present: (a) introductory section explaining sponsorship value, (b) minimum three tiers (Bronze, Silver, Gold) each with list of benefits, (c) responsive grid of sponsor logos (alt text; placeholder if missing), (d) a prominent call-to-action button labeled "Become a Sponsor" linking to existing sponsoring dossier, and (e) disclaimer on logo usage rights; page MUST follow dark theme with #45e783 accent and be accessible (semantic headings, keyboard focusable CTA).
 
-### Key Entities _(include if feature involves data)_
+### Key Entities _(include if feature involves data)_ (Normalized naming)
 
-- **Event**: Represents scheduled club activity. Attributes: title, startDate/time, location, description, status (upcoming/past), optional image, sort key (startDate).
+- **Event**: Represents scheduled club activity. Attributes: title, date (ISO), startTime (HH:MM optional), endTime (HH:MM optional), location, description, status (upcoming/past derived), optional image, sort key (date then title).
 - **NewsArticle**: Represents a published update. Attributes: title, publishDate, teaser, body, optional tags, optional image.
 - **Team**: Represents a club team. Attributes: name, type (E-Darts | Steel-Darts), description/highlights, roster (Member references).
-- **Member**: Represents a club participant. Attributes: name, membershipCategory (Active | Passive | Committee), optional role (e.g., Captain, Treasurer), optional short bio.
+- **Member**: Represents a club participant. Attributes: name, membershipCategory (active | passive | committee), active (boolean convenience flag), optional role (e.g., Captain, Treasurer), optional short bio, optional committeeRoleId (if committee).
 - **CommitteeRole**: Mapping between role title and Member (derived view from Member data where membershipCategory=Committee).
-- **Sponsor**: Represents supporting organization/individual. Attributes: name, tier (Bronze | Silver | Gold | Other), logo (optional), website URL (optional), short description, benefits list reference.
+- **Sponsor**: Represents supporting organization/individual. Attributes: name, tier (bronze | silver | gold), logo (optional), website URL (optional), short description (blurb), benefits list reference (external `sponsors-tiers.md`), since (YYYY optional).
 
 ## Success Criteria _(mandatory)_
 
-### Measurable Outcomes
+### Measurable Outcomes (Updated performance metric)
 
-- **SC-001**: Landing page initial content (events + news teasers) visible within 2 seconds on standard broadband (cold load) in 90% of test runs.
+- **SC-001**: Landing page initial content (events + news teasers) visible within 3 seconds on standard broadband (cold load) in 90% of test runs.
 - **SC-002**: 100% pages pass automated WCAG AA contrast checks for text and interactive elements.
 - **SC-003**: Navigation path to any core page requires ≤2 clicks from any other page (verified via usability walkthrough).
 - **SC-004**: Responsive layout renders without horizontal scroll at viewport widths: 320px, 375px, 768px, 1024px, 1440px (95% element containers verified).
@@ -110,10 +110,11 @@ Visitor navigates to About, Clubhouse, and Club subpages (Active Members, Passiv
 - **SC-007**: Dark theme + #45e783 accent consistently applied: minimum 90% of accent-eligible components use specified color (style audit sample).
 - **SC-008**: No secrets or personally sensitive data found via repository scan (0 violations).
 
-## Notes & Assumptions
+## Notes & Assumptions (Updated)
 
 - Content management assumed manual/static for initial version—no CMS or admin interface included.
 - Member privacy: Only names and roles displayed; no contact details (email/phone) shown.
-- Events considered "upcoming" if startDate > current date/time at build or deployment.
+- Events considered "upcoming" if date > current date/time at build or deployment.
+- Performance target relaxed from 2s to 3s to align with Constitution baseline while retaining stretch goal potential.
 - Performance target excludes first-time DNS/connection overhead; focuses on rendering meaningful content.
 - Security implementation defined as deployment configuration (hosting platform) + static headers; not covering dynamic server hardening.
