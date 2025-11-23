@@ -1,0 +1,59 @@
+[
+  {
+    "id": "event-2026-04-10-spring-training",
+    "title": "Spring Training Session",
+    "date": "2026-04-10",
+    "startTime": "18:00",
+    "endTime": "21:00",
+    "location": "DC Farmer Clubhouse",
+    "description": "Join us for our regular Thursday training session. All skill levels welcome!",
+    "type": "training",
+    "teamIds": ["edarts", "steeldarts"],
+    "cancelled": false
+  },
+  {
+    "id": "event-2026-04-15-league-match",
+    "title": "League Match vs. Bullseye Club",
+    "date": "2026-04-15",
+    "startTime": "19:30",
+    "location": "Bullseye Club Arena",
+    "description": "Important league match - come support our team!",
+    "type": "match",
+    "teamIds": ["steeldarts"],
+    "cancelled": false
+  },
+  {
+    "id": "event-2026-05-01-spring-tournament",
+    "title": "Spring Open Tournament 2026",
+    "date": "2026-05-01",
+    "startTime": "10:00",
+    "endTime": "18:00",
+    "location": "DC Farmer Clubhouse",
+    "description": "Our annual Spring Open returns with expanded brackets. Open to all players!",
+    "type": "tournament",
+    "teamIds": [],
+    "cancelled": false
+  },
+  {
+    "id": "event-2026-05-20-annual-meeting",
+    "title": "Annual General Meeting",
+    "date": "2026-05-20",
+    "startTime": "19:00",
+    "location": "DC Farmer Clubhouse",
+    "description": "Annual club meeting - all members encouraged to attend.",
+    "type": "meeting",
+    "teamIds": [],
+    "cancelled": false
+  },
+  {
+    "id": "event-2026-06-12-summer-bbq",
+    "title": "Summer BBQ & Social",
+    "date": "2026-06-12",
+    "startTime": "17:00",
+    "location": "DC Farmer Clubhouse Terrace",
+    "description": "End of season celebration with food, drinks, and friendly matches!",
+    "type": "social",
+    "teamIds": [],
+    "cancelled": false
+  }
+]

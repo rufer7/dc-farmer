@@ -1,0 +1,38 @@
+[
+  {
+    "id": "local-sports-bar",
+    "name": "Local Sports Bar & Grill",
+    "tier": "gold",
+    "website": "https://example.com/sportsbar",
+    "logo": null,
+    "since": "2020",
+    "blurb": "Our premier sponsor and venue partner for special events"
+  },
+  {
+    "id": "dart-equipment-co",
+    "name": "Dart Equipment Co.",
+    "tier": "silver",
+    "website": "https://example.com/dartequip",
+    "logo": null,
+    "since": "2022",
+    "blurb": "Quality darts and accessories supplier"
+  },
+  {
+    "id": "community-bank",
+    "name": "Community Bank",
+    "tier": "silver",
+    "website": "https://example.com/bank",
+    "logo": null,
+    "since": "2021",
+    "blurb": "Supporting local sports and community initiatives"
+  },
+  {
+    "id": "pizza-place",
+    "name": "Tony's Pizza",
+    "tier": "bronze",
+    "website": "https://example.com/pizza",
+    "logo": null,
+    "since": "2023",
+    "blurb": "Fuel for our tournaments!"
+  }
+]
