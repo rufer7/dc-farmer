@@ -1,7 +1,7 @@
 /**
  * Landing page initialization
  */
-import { renderUpcomingEvents, renderLatestNews } from '/public/js/data-loader.js';
+import { renderUpcomingEvents, renderLatestNews } from './data-loader.js';
 
 // Initialize page when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {

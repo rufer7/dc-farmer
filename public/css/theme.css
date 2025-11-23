@@ -447,17 +447,11 @@
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
 }
 
 .news-summary {
   color: var(--color-text);
   margin-bottom: var(--spacing-md);
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
 }
 
 /* Empty State */
@@ -489,7 +483,6 @@
 .section-header {
   margin-bottom: var(--spacing-xl);
   position: relative;
-  padding-bottom: var(--spacing-md);
 }
 
 .section-title {
@@ -499,7 +492,6 @@
   font-weight: 700;
   position: relative;
   display: inline-block;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .section-title::after {
@@ -516,9 +508,8 @@
 
 .section-subtitle {
   font-size: var(--font-size-lg);
-  color: var(--color-text);
+  color: var(--color-text-muted);
   font-weight: 400;
-  opacity: 0.9;
 }
 
 /* Hero Section */
