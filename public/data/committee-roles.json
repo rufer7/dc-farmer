@@ -1,0 +1,26 @@
+[
+  {
+    "id": "president",
+    "title": "President",
+    "description": "Club leadership and strategic direction",
+    "order": 1
+  },
+  {
+    "id": "treasurer",
+    "title": "Treasurer",
+    "description": "Financial management and budgeting",
+    "order": 2
+  },
+  {
+    "id": "secretary",
+    "title": "Secretary",
+    "description": "Administrative duties and record keeping",
+    "order": 3
+  },
+  {
+    "id": "sports-director",
+    "title": "Sports Director",
+    "description": "Team management and competition coordination",
+    "order": 4
+  }
+]

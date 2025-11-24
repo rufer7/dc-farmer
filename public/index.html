@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';">
+  <title>DC Farmer - Darts Club</title>
+  <meta name="description" content="DC Farmer - Your local darts club featuring E-Darts and Steel Darts teams, regular events, and a welcoming community.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components/carousel.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="site-title">
+        <a href="index.html">🎯 DC Farmer</a>
+      </h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team-edarts.html">E-Darts</a></li>
+          <li><a href="team-steeldarts.html">Steel Darts</a></li>
+          <li><a href="sponsoring.html">Sponsors</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero-title">Welcome to DC Farmer</h2>
+        <p class="hero-subtitle">Your local darts club - where precision meets passion</p>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Upcoming Events</h2>
+          <p class="section-subtitle">Join us at our next club activities</p>
+        </div>
+        <div id="upcoming-events" class="grid grid-3">
+          <!-- Events will be loaded dynamically -->
+          <div class="empty-state">
+            <div class="empty-state-icon">⏳</div>
+            <p class="empty-state-message">Loading events...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest News</h2>
+          <p class="section-subtitle">Stay updated with club announcements</p>
+        </div>
+        <div id="latest-news" class="grid grid-3">
+          <!-- News will be loaded dynamically -->
+          <div class="empty-state">
+            <div class="empty-state-icon">⏳</div>
+            <p class="empty-state-message">Loading news...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span data-year>2024</span> DC Farmer. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="club-committee.html">Committee</a></li>
+          <li><a href="clubhouse.html">Clubhouse</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/init-landing.js"></script>
+</body>
+</html>

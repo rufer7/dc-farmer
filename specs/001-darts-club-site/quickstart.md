@@ -163,3 +163,41 @@ Open an issue labeled `content` or `design` for changes needing review.
 ---
 
 Maintainers may extend this guide as tooling evolves.
+
+## 15. Image Optimization Notes
+
+All images should be optimized before adding to the repository:
+
+### Member Photos
+- **Format**: WebP preferred, PNG/JPEG as fallback
+- **Max dimensions**: 400x400px
+- **Target size**: < 60KB
+- **Naming**: lowercase-hyphenated-name.webp
+- **Location**: `/public/images/members/`
+
+### Sponsor Logos
+- **Format**: WebP with PNG fallback for transparency
+- **Max dimensions**: 400x200px
+- **Target size**: < 50KB
+- **Naming**: sponsor-slug.webp
+- **Location**: `/public/images/sponsors/`
+
+### Optimization Tools
+```bash
+# Using ImageMagick
+convert input.jpg -resize 400x400 -quality 85 output.webp
+
+# Using cwebp (WebP encoder)
+cwebp -q 85 input.jpg -o output.webp
+
+# Batch optimization
+for img in *.jpg; do cwebp -q 85 "$img" -o "${img%.jpg}.webp"; done
+```
+
+### Performance Impact
+Properly optimized images ensure:
+- Faster page load times
+- Lower bandwidth usage
+- Better Lighthouse performance scores
+- Improved mobile experience
+
