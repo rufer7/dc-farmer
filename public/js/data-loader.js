@@ -4,6 +4,11 @@
  */
 
 /**
+ * Constants
+ */
+const MEMBER_PLACEHOLDER = 'images/placeholders/member-placeholder.svg';
+
+/**
  * Fetch JSON data from a file
  */
 async function fetchData(path) {
@@ -219,7 +224,7 @@ export async function renderCommittee(containerId) {
                    alt="${escapeHtml(assignedMember.displayName)}" 
                    class="member-image">
             ` : `
-              <img src="images/placeholders/member-placeholder.svg" 
+              <img src="${MEMBER_PLACEHOLDER}" 
                    alt="Member placeholder" 
                    class="member-image">
             `}
@@ -244,7 +249,7 @@ function renderMemberCard(member) {
              alt="${escapeHtml(member.displayName)}" 
              class="member-image">
       ` : `
-        <img src="images/placeholders/member-placeholder.svg" 
+        <img src="${MEMBER_PLACEHOLDER}" 
              alt="Member placeholder" 
              class="member-image">
       `}
