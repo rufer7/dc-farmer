@@ -8,7 +8,7 @@
     "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
     "title": { "type": "string", "minLength": 2, "maxLength": 80 },
     "description": { "type": "string", "maxLength": 160 },
-    "order": { "type": "integer", "minimum": 0 }
+    "order": { "type": "integer", "minimum": 1 }
   },
   "additionalProperties": false
 }
