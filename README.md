@@ -17,7 +17,7 @@
 New website of darts club `DC Farmer`
 
 > [!IMPORTANT]
-> The new website is currently under construction and therefore not yet deployed.
+> The new website is currently under construction and therefore not yet deployed to `dcfarmer.ch`.
 
 ## Preview
 
@@ -28,6 +28,7 @@ See [here](https://rufer7.github.io/dc-farmer/)
 A modern, mobile-first static website for DC Farmer darts club with:
 
 ### Key Features
+
 - **Dark Theme Design**: Professional dark theme with accent color #45e783
 - **Responsive Layout**: Mobile-first design supporting all devices (320px+)
 - **Team Pages**: Dedicated pages for E-Darts and Steel Darts teams
@@ -38,6 +39,7 @@ A modern, mobile-first static website for DC Farmer darts club with:
 - **Security**: Content Security Policy (CSP) headers, no inline scripts
 
 ### Technical Stack
+
 - **HTML5, CSS3, Vanilla JavaScript** (no frameworks or build tools)
 - **ECMAScript Modules** for clean, modular code
 - **GitHub Pages** hosting with static file serving
@@ -45,6 +47,7 @@ A modern, mobile-first static website for DC Farmer darts club with:
 - **Markdown support** for rich news articles
 
 ### Project Structure
+
 ```
 public/
 ├── index.html              # Landing page
@@ -80,11 +83,13 @@ public/
 ```
 
 ### Performance Targets
+
 - Total initial JS: < 8KB
 - Total CSS: < 50KB
 - Largest Contentful Paint (LCP): < 3.0s on standard broadband
 
 ### Local Development
+
 ```bash
 # Serve the site locally
 python -m http.server 8080
@@ -96,13 +101,16 @@ python -m http.server 8080
 ### Quality Checks
 
 #### Lighthouse Performance Testing
+
 Run Lighthouse manually in Chrome DevTools:
+
 1. Open Chrome DevTools (F12)
 2. Go to Lighthouse tab
 3. Select categories: Performance, Accessibility, Best Practices, SEO
 4. Click "Analyze page load"
 
 **Performance Targets:**
+
 - Performance Score: > 90
 - Accessibility Score: > 90
 - Best Practices Score: > 90
@@ -111,6 +119,7 @@ Run Lighthouse manually in Chrome DevTools:
 - Total Blocking Time (TBT): < 200ms
 
 #### Accessibility Testing with Pa11y
+
 ```bash
 # Install Pa11y CLI
 npm install -g pa11y-ci
@@ -123,6 +132,7 @@ pa11y-ci --config tests/accessibility/pa11y.config.json
 ```
 
 #### Security Review Checklist
+
 - [x] Content Security Policy (CSP) meta tag present in all HTML pages
 - [x] No inline scripts or styles (all external)
 - [x] All scripts loaded as ES modules with `type="module"`
@@ -133,6 +143,7 @@ pa11y-ci --config tests/accessibility/pa11y.config.json
 - [x] Safe JSON parsing with error handling
 
 #### Keyboard Navigation Testing
+
 - [x] All interactive elements accessible via Tab key
 - [x] Focus indicators visible on all focusable elements
 - [x] Carousel supports Arrow keys, Home, and End keys
@@ -140,7 +151,9 @@ pa11y-ci --config tests/accessibility/pa11y.config.json
 - [x] No keyboard traps
 
 ### Documentation
+
 See `specs/001-darts-club-site/` for complete specification:
+
 - `plan.md` - Technical implementation plan
 - `data-model.md` - Data structure definitions
 - `quickstart.md` - Contributing guide
