@@ -40,7 +40,7 @@ All NEEDS CLARIFICATION items resolved. Decisions below.
 
 ## 7. CSP Directives
 
-- **Decision**: `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';">` placed in `<head>` for all pages.
+- **Decision**: `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self';">` placed in `<head>` for all pages.
 - **Rationale**: Restricts to self-hosted assets; allows data URIs for icons/placeholders; disallows inline and external scripts/styles by design.
 - **Alternatives Considered**: Adding fonts from external hosts (would weaken simplicity); Allowing inline scripts (reduces security posture).
 

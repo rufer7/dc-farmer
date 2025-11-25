@@ -100,7 +100,7 @@ Article body paragraphs...
 ```html
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
+  content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self';"
 />
 ```
 
@@ -169,6 +169,7 @@ Maintainers may extend this guide as tooling evolves.
 All images should be optimized before adding to the repository:
 
 ### Member Photos
+
 - **Format**: WebP preferred, PNG/JPEG as fallback
 - **Max dimensions**: 400x400px
 - **Target size**: < 60KB
@@ -176,6 +177,7 @@ All images should be optimized before adding to the repository:
 - **Location**: `/public/images/members/`
 
 ### Sponsor Logos
+
 - **Format**: WebP with PNG fallback for transparency
 - **Max dimensions**: 400x200px
 - **Target size**: < 50KB
@@ -183,6 +185,7 @@ All images should be optimized before adding to the repository:
 - **Location**: `/public/images/sponsors/`
 
 ### Optimization Tools
+
 ```bash
 # Using ImageMagick
 convert input.jpg -resize 400x400 -quality 85 output.webp
@@ -195,9 +198,10 @@ for img in *.jpg; do cwebp -q 85 "$img" -o "${img%.jpg}.webp"; done
 ```
 
 ### Performance Impact
+
 Properly optimized images ensure:
+
 - Faster page load times
 - Lower bandwidth usage
 - Better Lighthouse performance scores
 - Improved mobile experience
-
