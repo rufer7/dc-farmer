@@ -55,15 +55,15 @@ Body: Markdown content (basic formatting only: headings, paragraphs, lists, link
 
 Public profile card for club member and/or team player.
 
-| Field              | Type     | Required | Constraints                            | Notes                                     |
-| ------------------ | -------- | -------- | -------------------------------------- | ----------------------------------------- |
-| id                 | string   | yes      | slug unique                            | Based on name                             |
-| displayName        | string   | yes      | 2-80 chars                             | Shown on card                             |
-| membershipCategory | string   | yes      | enum: `active`, `passive`, `committee` | Primary classification                    |
-| active             | boolean  | yes      | default true                           | Convenience flag (true unless passive)    |
-| role               | string   | no       | free text <= 60 chars                  | e.g., "Player", "Coach"                   |
-| committeeRoleId    | string   | no       | valid committee role id                | Present if membershipCategory = committee |
-| teams              | string[] | no       | each valid team id                     | Memberships                               |
+| Field              | Type     | Required | Constraints                                                       | Notes                                     |
+| ------------------ | -------- | -------- | ----------------------------------------------------------------- | ----------------------------------------- |
+| id                 | string   | yes      | slug unique                                                       | Based on name                             |
+| displayName        | string   | yes      | 2-80 chars                                                        | Shown on card                             |
+| membershipCategory | string   | yes      | enum: `active`, `passive`, `committee`                            | Primary classification                    |
+| active             | boolean  | yes      | default true                                                      | Convenience flag (true unless passive)    |
+| role               | string   | no       | free text <= 60 chars                                             | e.g., "Player", "Coach"                   |
+| committeeRoleId    | string   | no       | valid committee role id                                           | Present if membershipCategory = committee |
+| teams              | string[] | no       | each valid team id                                                | Memberships                               |
 | image              | string   | no       | path relative to `public/` (e.g., `images/members/filename.webp`) | WebP preferred                            |
 
 ### CommitteeRole
@@ -75,7 +75,7 @@ Defines a governance position in the club.
 | id          | string | yes      | slug unique |                   |
 | title       | string | yes      | 2-80 chars  | e.g., "President" |
 | description | string | no       | 0-160 chars | Optional brief    |
-| order       | number | yes      | integer >=0 | Sort ordering     |
+| order       | number | yes      | integer >=1 | Sort ordering     |
 
 ### Team
 
