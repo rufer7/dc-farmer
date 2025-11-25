@@ -6,6 +6,7 @@
 /**
  * Constants
  */
+const DATA_PATH = '../data/';
 const MEMBER_PLACEHOLDER = 'images/placeholders/member-placeholder.svg';
 
 /**
@@ -31,7 +32,7 @@ export async function renderUpcomingEvents(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
   
-  const events = await fetchData('../data/events.json');
+  const events = await fetchData(`${DATA_PATH}events.json`);
   if (!events || !Array.isArray(events)) {
     showEmptyState(container, 'No events scheduled', 'Check back soon for upcoming club events.');
     return;
@@ -69,7 +70,7 @@ export async function renderLatestNews(containerId) {
   
   // For now, we'll use a simple news.json approach
   // In future, this could parse markdown frontmatter
-  const newsArticles = await fetchData('../data/news.json');
+  const newsArticles = await fetchData(`${DATA_PATH}news.json`);
   if (!newsArticles || !Array.isArray(newsArticles)) {
     showEmptyState(container, 'No news available', 'Stay tuned for club updates and announcements.');
     return;
@@ -108,8 +109,8 @@ export async function renderTeamRoster(teamId, containerId) {
   if (!container) return;
   
   const [teams, members] = await Promise.all([
-    fetchData('../data/teams.json'),
-    fetchData('../data/members.json')
+    fetchData(`${DATA_PATH}teams.json`),
+    fetchData(`${DATA_PATH}members.json`)
   ]);
   
   if (!teams || !members) {
@@ -144,7 +145,7 @@ export async function renderActiveMembers(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
   
-  const members = await fetchData('../data/members.json');
+  const members = await fetchData(`${DATA_PATH}members.json`);
   if (!members || !Array.isArray(members)) {
     showEmptyState(container, 'Unable to load members', 'Please try again later.');
     return;
@@ -171,7 +172,7 @@ export async function renderPassiveMembers(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
   
-  const members = await fetchData('../data/members.json');
+  const members = await fetchData(`${DATA_PATH}members.json`);
   if (!members || !Array.isArray(members)) {
     showEmptyState(container, 'Unable to load members', 'Please try again later.');
     return;
@@ -199,8 +200,8 @@ export async function renderCommittee(containerId) {
   if (!container) return;
   
   const [roles, members] = await Promise.all([
-    fetchData('../data/committee-roles.json'),
-    fetchData('../data/members.json')
+    fetchData(`${DATA_PATH}committee-roles.json`),
+    fetchData(`${DATA_PATH}members.json`)
   ]);
   
   if (!roles || !members) {
