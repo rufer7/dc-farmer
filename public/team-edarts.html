@@ -1,76 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';">
-  <title>E-Darts Team - DC Farmer</title>
-  <meta name="description" content="Meet our competitive E-Darts team representing DC Farmer in regional league competitions.">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/theme.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="site-title">
-        <a href="index.html">🎯 DC Farmer</a>
-      </h1>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="team-edarts.html" aria-current="page">E-Darts</a></li>
-          <li><a href="team-steeldarts.html">Steel Darts</a></li>
-          <li><a href="sponsoring.html">Sponsors</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="section">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
+    />
+    <title>E-Darts Team - DC Farmer</title>
+    <meta
+      name="description"
+      content="Meet our competitive E-Darts team representing DC Farmer in regional league competitions."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <header>
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">DC Farmer E-Darts</h2>
-          <p class="section-subtitle">Regional League Division 2</p>
-        </div>
+        <h1 class="site-title">
+          <a href="index.html">🎯 DC Farmer</a>
+        </h1>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team-edarts.html" aria-current="page">E-Darts</a></li>
+            <li><a href="team-steeldarts.html">Steel Darts</a></li>
+            <li><a href="sponsoring.html">Sponsors</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <div class="card mt-lg">
-          <h3 class="card-title">Team Highlights</h3>
-          <p class="card-content">
-            Our E-Darts team competes in the Regional League Division 2, showcasing skill and 
-            teamwork on electronic dartboards. We focus on developing both individual technique 
-            and collaborative strategies for team success.
-          </p>
-        </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">DC Farmer E-Darts</h2>
+            <p class="section-subtitle">Regional League Division 2</p>
+          </div>
 
-        <div class="section-header mt-lg">
-          <h3 class="section-title">Team Roster</h3>
-        </div>
-        <div id="edarts-roster">
-          <!-- Roster will be loaded dynamically -->
-          <div class="empty-state">
-            <div class="empty-state-icon">⏳</div>
-            <p class="empty-state-message">Loading team roster...</p>
+          <div class="card mt-lg">
+            <h3 class="card-title">Team Highlights</h3>
+            <p class="card-content">
+              Our E-Darts team competes in the Regional League Division 2,
+              showcasing skill and teamwork on electronic dartboards. We focus
+              on developing both individual technique and collaborative
+              strategies for team success.
+            </p>
+          </div>
+
+          <div class="section-header mt-lg">
+            <h3 class="section-title">Team Roster</h3>
+          </div>
+          <div id="edarts-roster">
+            <!-- Roster will be loaded dynamically -->
+            <div class="empty-state">
+              <div class="empty-state-icon">⏳</div>
+              <p class="empty-state-message">Loading team roster...</p>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <span data-year>2025</span> DC Farmer. All rights reserved.
+        </p>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-nav">
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <a href="https://www.darts.ch/de/" rel="noreferrer"
+                >Swiss Darts Association</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span data-year>2024</span> DC Farmer. All rights reserved.</p>
-      <nav aria-label="Footer navigation">
-        <ul class="footer-nav">
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="club-committee.html">Committee</a></li>
-          <li><a href="clubhouse.html">Clubhouse</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-
-  <script type="module" src="js/init-edarts.js"></script>
-</body>
+    <script type="module" src="js/init-edarts.js"></script>
+  </body>
 </html>

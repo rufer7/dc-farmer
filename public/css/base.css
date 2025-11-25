@@ -250,9 +250,6 @@ nav a {
   text-decoration: none;
   padding: var(--spacing-sm) 0;
   transition: color var(--transition-fast);
-}
-
-nav a {
   position: relative;
 }
 
