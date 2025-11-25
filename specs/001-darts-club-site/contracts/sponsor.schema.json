@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dc-farmer.example/schema/sponsor.json",
+  "title": "Sponsor",
+  "type": "object",
+  "required": ["id", "name", "tier"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 2, "maxLength": 120 },
+    "tier": { "type": "string", "enum": ["gold", "silver", "bronze"] },
+    "website": { "type": "string", "format": "uri" },
+    "logo": { "type": "string", "pattern": "^images/sponsors/.+.(webp|png)$" },
+    "since": { "type": "string", "pattern": "^[0-9]{4}$" },
+    "blurb": { "type": "string", "maxLength": 160 }
+  },
+  "additionalProperties": false
+}

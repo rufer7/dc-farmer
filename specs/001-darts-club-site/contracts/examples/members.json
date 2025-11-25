@@ -1,0 +1,18 @@
+[
+  {
+    "id": "john-d",
+    "displayName": "John D.",
+    "role": "Player",
+    "teams": ["team-edarts"],
+    "image": "images/members/john-d.webp",
+    "active": true
+  },
+  {
+    "id": "sara-k",
+    "displayName": "Sara K.",
+    "role": "Coach",
+    "committeeRoleId": "training-coordinator",
+    "teams": ["team-steeldarts"],
+    "active": true
+  }
+]

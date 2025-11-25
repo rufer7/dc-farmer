@@ -1,0 +1,16 @@
+[
+  {
+    "id": "edarts",
+    "name": "DC Farmer E-Darts",
+    "discipline": "edarts",
+    "division": "Regional League Division 2",
+    "members": ["sarah-johnson", "emma-davis", "lisa-martinez"]
+  },
+  {
+    "id": "steeldarts",
+    "name": "DC Farmer Steel Darts",
+    "discipline": "steeldarts",
+    "division": "District League Division 1",
+    "members": ["john-smith", "emma-davis", "jennifer-anderson"]
+  }
+]

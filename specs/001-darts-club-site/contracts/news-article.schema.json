@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dc-farmer.example/schema/news-article.json",
+  "title": "NewsArticleFrontmatter",
+  "type": "object",
+  "required": ["id", "title", "date"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string", "minLength": 3, "maxLength": 160 },
+    "date": { "type": "string", "format": "date" },
+    "author": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 30 },
+      "maxItems": 10,
+      "uniqueItems": true
+    },
+    "summary": { "type": "string", "maxLength": 240 }
+  },
+  "additionalProperties": false
+}
