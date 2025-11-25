@@ -6,7 +6,7 @@
 /**
  * Constants
  */
-const DATA_PATH = "/data/";
+const DATA_PATH = "data/";
 const MEMBER_PLACEHOLDER = "images/placeholders/member-placeholder.svg";
 
 /**
