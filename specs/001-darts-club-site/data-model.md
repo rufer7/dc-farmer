@@ -64,7 +64,7 @@ Public profile card for club member and/or team player.
 | role               | string   | no       | free text <= 60 chars                  | e.g., "Player", "Coach"                   |
 | committeeRoleId    | string   | no       | valid committee role id                | Present if membershipCategory = committee |
 | teams              | string[] | no       | each valid team id                     | Memberships                               |
-| image              | string   | no       | path relative `images/members/`        | WebP preferred                            |
+| image              | string   | no       | path relative to `public/` (e.g., `images/members/filename.webp`) | WebP preferred                            |
 
 ### CommitteeRole
 
