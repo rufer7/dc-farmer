@@ -3,7 +3,7 @@
 **Feature Branch**: `001-darts-club-site`  
 **Created**: 2025-11-22  
 **Status**: Draft  
-**Input**: User description: "I'm building a modern website for darts club DC Farmer. I want it to be sleek, appealing and someting that would stand out. There should be a landing page with the next 3 events and the three newest news articles, an about page, two teams pages (one for E-Darts team and one for Steel-Darts team), a clubhouse page and a club page with subpages for active members, passive members and the committee. The whole webiste should be in dark theme with #45e783 as secondary color."
+**Input**: User description: "I'm building a modern website for darts club DC Farmer. I want it to be sleek, appealing and something that would stand out. There should be a landing page with the next 3 events and the three newest news articles, an about page, two teams pages (one for E-Darts team and one for Steel-Darts team), a clubhouse page and a club page with subpages for active members, passive members and the committee. The whole website should be in dark theme with #45e783 as secondary color."
 
 ## User Scenarios & Testing _(mandatory)_
 
