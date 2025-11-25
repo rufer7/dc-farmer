@@ -519,6 +519,10 @@
   background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
+  background-image: url('../images/banner.jpg');
+  background-size: cover;
+  background-position: 50% 90%;
+  /* X Y: move focus right/up */
 }
 
 .hero::before {
