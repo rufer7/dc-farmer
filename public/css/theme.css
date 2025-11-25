@@ -559,7 +559,7 @@
 
 .hero-subtitle {
   font-size: var(--font-size-xl);
-  color: var(--color-text-muted);
+  color: white;
   margin-bottom: var(--spacing-xl);
   position: relative;
 }
