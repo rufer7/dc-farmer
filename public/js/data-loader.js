@@ -36,8 +36,8 @@ export async function renderUpcomingEvents(containerId) {
   if (!events || !Array.isArray(events)) {
     showEmptyState(
       container,
-      "No events scheduled",
-      "Check back soon for upcoming club events."
+      "Keine Veranstaltungen geplant",
+      "Schau bald wieder vorbei für kommende Clubveranstaltungen."
     );
     return;
   }
@@ -51,8 +51,8 @@ export async function renderUpcomingEvents(containerId) {
   if (upcomingEvents.length === 0) {
     showEmptyState(
       container,
-      "No upcoming events",
-      "Check back soon for new events!"
+      "Keine kommenden Veranstaltungen",
+      "Schau bald wieder vorbei für neue Veranstaltungen!"
     );
     return;
   }
@@ -98,8 +98,8 @@ export async function renderLatestNews(containerId) {
   if (!newsArticles || !Array.isArray(newsArticles)) {
     showEmptyState(
       container,
-      "No news available",
-      "Stay tuned for club updates and announcements."
+      "Keine Neuigkeiten verfügbar",
+      "Bleib dran für Club-Updates und Ankündigungen."
     );
     return;
   }
@@ -109,7 +109,11 @@ export async function renderLatestNews(containerId) {
     .slice(0, 3);
 
   if (latestNews.length === 0) {
-    showEmptyState(container, "No news available", "Stay tuned for updates!");
+    showEmptyState(
+      container,
+      "Keine Neuigkeiten verfügbar",
+      "Bleib dran für Club-Updates und Ankündigungen."
+    );
     return;
   }
 
@@ -163,8 +167,8 @@ export async function renderTeamRoster(teamId, containerId) {
   if (!teams || !members) {
     showEmptyState(
       container,
-      "Unable to load roster",
-      "Please try again later."
+      "Kader konnte nicht geladen werden",
+      "Bitte versuche es später erneut."
     );
     return;
   }
@@ -173,8 +177,8 @@ export async function renderTeamRoster(teamId, containerId) {
   if (!team) {
     showEmptyState(
       container,
-      "Team not found",
-      "The requested team could not be found."
+      "Team nicht gefunden",
+      "Das angeforderte Team konnte nicht gefunden werden."
     );
     return;
   }
@@ -182,8 +186,8 @@ export async function renderTeamRoster(teamId, containerId) {
   if (!team.members || team.members.length === 0) {
     showEmptyState(
       container,
-      "No team members yet",
-      "This team is currently being formed. Check back soon!"
+      "Noch keine Teammitglieder",
+      "Dieses Team wird derzeit zusammengestellt. Schau bald wieder vorbei!"
     );
     return;
   }
@@ -210,8 +214,8 @@ export async function renderActiveMembers(containerId) {
   if (!members || !Array.isArray(members)) {
     showEmptyState(
       container,
-      "Unable to load members",
-      "Please try again later."
+      "Mitglieder konnten nicht geladen werden",
+      "Bitte versuche es später erneut."
     );
     return;
   }
@@ -223,8 +227,8 @@ export async function renderActiveMembers(containerId) {
   if (activeMembers.length === 0) {
     showEmptyState(
       container,
-      "No active members",
-      "Member information will be available soon."
+      "Keine aktiven Mitglieder",
+      "Mitgliederinformationen werden bald verfügbar sein."
     );
     return;
   }
@@ -247,8 +251,8 @@ export async function renderPassiveMembers(containerId) {
   if (!members || !Array.isArray(members)) {
     showEmptyState(
       container,
-      "Unable to load members",
-      "Please try again later."
+      "Mitglieder konnten nicht geladen werden",
+      "Bitte versuche es später erneut."
     );
     return;
   }
@@ -260,8 +264,8 @@ export async function renderPassiveMembers(containerId) {
   if (passiveMembers.length === 0) {
     showEmptyState(
       container,
-      "No passive members",
-      "Member information will be available soon."
+      "Keine Passivmitglieder",
+      "Mitgliederinformationen werden bald verfügbar sein."
     );
     return;
   }
@@ -288,8 +292,8 @@ export async function renderCommittee(containerId) {
   if (!roles || !members) {
     showEmptyState(
       container,
-      "Unable to load committee",
-      "Please try again later."
+      "Vorstand konnte nicht geladen werden",
+      "Bitte versuche es später erneut."
     );
     return;
   }
@@ -331,7 +335,7 @@ export async function renderCommittee(containerId) {
           </div>
         `
             : `
-          <p class="text-muted">Position currently vacant</p>
+          <p class="text-muted">Vakant</p>
         `
         }
       </div>
