@@ -2,7 +2,7 @@
   {
     "id": "acme-tools",
     "name": "ACME Tools",
-    "tier": "gold",
+    "tier": "main",
     "website": "https://www.acme-tools.example",
     "logo": "images/sponsors/acme-tools.webp",
     "since": "2024",
@@ -11,7 +11,7 @@
   {
     "id": "spark-energy",
     "name": "Spark Energy",
-    "tier": "silver",
+    "tier": "shirt",
     "website": "https://www.spark-energy.example",
     "logo": "images/sponsors/spark-energy.webp",
     "since": "2025"

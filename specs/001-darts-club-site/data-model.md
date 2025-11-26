@@ -95,16 +95,16 @@ Relationship: `members` references `Member.id` (redundant with Member.teams for 
 
 Commercial supporter entity.
 
-| Field    | Type     | Required | Constraints                      | Notes                                                                              |
-| -------- | -------- | -------- | -------------------------------- | ---------------------------------------------------------------------------------- |
-| id       | string   | yes      | slug unique                      | Based on name                                                                      |
-| name     | string   | yes      | 2-120 chars                      | Display brand                                                                      |
-| tier     | string   | yes      | enum: `gold`, `silver`, `bronze` | Sponsoring level                                                                   |
-| website  | string   | no       | valid URL                        | HTTPS preferred                                                                    |
-| logo     | string   | no       | path `images/sponsors/`          | WebP + fallback PNG                                                                |
-| since    | string   | no       | ISO year `YYYY`                  | Support start                                                                      |
-| blurb    | string   | no       | 0-160 chars                      | Short visible text                                                                 |
-| benefits | string[] | no       | each 2-120 chars                 | Optional inlined benefits (tier list); if absent, sourced from `sponsors-tiers.md` |
+| Field    | Type     | Required | Constraints                                  | Notes                                                                              |
+| -------- | -------- | -------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
+| id       | string   | yes      | slug unique                                  | Based on name                                                                      |
+| name     | string   | yes      | 2-120 chars                                  | Display brand                                                                      |
+| tier     | string   | yes      | enum: `main`, `shirt`, `tournament`, `board` | Sponsoring level                                                                   |
+| website  | string   | no       | valid URL                                    | HTTPS preferred                                                                    |
+| logo     | string   | no       | path `images/sponsors/`                      | WebP + fallback PNG                                                                |
+| since    | string   | no       | ISO year `YYYY`                              | Support start                                                                      |
+| blurb    | string   | no       | 0-160 chars                                  | Short visible text                                                                 |
+| benefits | string[] | no       | each 2-120 chars                             | Optional inlined benefits (tier list); if absent, sourced from `sponsors-tiers.md` |
 
 ## Derived / Computed Values
 

@@ -1,26 +1,38 @@
 [
   {
     "id": "president",
-    "title": "President",
-    "description": "Club leadership and strategic direction",
+    "title": "Präsident",
+    "description": "Leitung des Vereins und Vertretung nach aussen",
     "order": 1
   },
   {
-    "id": "treasurer",
-    "title": "Treasurer",
-    "description": "Financial management and budgeting",
+    "id": "vice-president",
+    "title": "Vizepräsident",
+    "description": "Unterstützung des Präsidenten und Vertretung bei Abwesenheit",
     "order": 2
   },
   {
-    "id": "secretary",
-    "title": "Secretary",
-    "description": "Administrative duties and record keeping",
+    "id": "treasurer",
+    "title": "Kassierin",
+    "description": "Verwaltung der Finanzen und Budgetierung",
     "order": 3
   },
   {
-    "id": "sports-director",
-    "title": "Sports Director",
-    "description": "Team management and competition coordination",
+    "id": "secretary",
+    "title": "Sekretär",
+    "description": "Administrative Aufgaben und Protokollführung",
     "order": 4
+  },
+  {
+    "id": "procurement-manager",
+    "title": "Procurement Manager (Beisizer)",
+    "description": "Beschaffung von Materialien und Ausrüstung",
+    "order": 5
+  },
+  {
+    "id": "webmaster",
+    "title": "Webmaster (Beisizer)",
+    "description": "Verwaltung und Pflege der Website",
+    "order": 6
   }
 ]

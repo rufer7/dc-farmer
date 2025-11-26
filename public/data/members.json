@@ -1,72 +1,37 @@
 [
   {
-    "id": "john-smith",
-    "displayName": "John Smith",
-    "membershipCategory": "active",
+    "id": "david-gerber",
+    "displayName": "David Gerber",
+    "membershipCategory": "committee",
+    "active": true,
+    "role": "Captain",
+    "committeeRoleId": "president",
+    "teams": ["steeldarts", "edarts"],
+    "image": null
+  },
+  {
+    "id": "tran-chi-minh",
+    "displayName": "Tran Chi-Minh",
+    "membershipCategory": "committee",
     "active": true,
     "role": "Player",
+    "committeeRoleId": "secretary",
+    "teams": ["steeldarts", "edarts"],
+    "image": null
+  },
+  {
+    "id": "stefano-scassa",
+    "displayName": "Stefano Scassa",
+    "membershipCategory": "committee",
+    "active": true,
+    "role": "Player",
+    "committeeRoleId": "vice-president",
     "teams": ["steeldarts"],
     "image": null
   },
   {
-    "id": "sarah-johnson",
-    "displayName": "Sarah Johnson",
-    "membershipCategory": "active",
-    "active": true,
-    "role": "Player",
-    "teams": ["edarts"],
-    "image": null
-  },
-  {
-    "id": "michael-brown",
-    "displayName": "Michael Brown",
-    "membershipCategory": "committee",
-    "active": true,
-    "role": "President",
-    "committeeRoleId": "president",
-    "teams": [],
-    "image": null
-  },
-  {
-    "id": "emma-davis",
-    "displayName": "Emma Davis",
-    "membershipCategory": "active",
-    "active": true,
-    "role": "Player",
-    "teams": ["edarts", "steeldarts"],
-    "image": null
-  },
-  {
-    "id": "david-wilson",
-    "displayName": "David Wilson",
-    "membershipCategory": "committee",
-    "active": true,
-    "role": "Treasurer",
-    "committeeRoleId": "treasurer",
-    "teams": [],
-    "image": null
-  },
-  {
-    "id": "lisa-martinez",
-    "displayName": "Lisa Martinez",
-    "membershipCategory": "active",
-    "active": true,
-    "role": "Coach",
-    "teams": ["edarts"],
-    "image": null
-  },
-  {
-    "id": "robert-taylor",
-    "displayName": "Robert Taylor",
-    "membershipCategory": "passive",
-    "active": false,
-    "role": "Former Player",
-    "teams": [],
-    "image": null
-  },
-  {
-    "id": "jennifer-anderson",
-    "displayName": "Jennifer Anderson",
+    "id": "marcos-de-la-fuente",
+    "displayName": "Marcos De La Fuente",
     "membershipCategory": "active",
     "active": true,
     "role": "Player",

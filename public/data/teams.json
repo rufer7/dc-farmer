@@ -3,14 +3,19 @@
     "id": "edarts",
     "name": "DC Farmer E-Darts",
     "discipline": "edarts",
-    "division": "Regional League Division 2",
-    "members": ["sarah-johnson", "emma-davis", "lisa-martinez"]
+    "division": "NLA",
+    "members": ["david-gerber", "tran-chi-minh"]
   },
   {
     "id": "steeldarts",
     "name": "DC Farmer Steel Darts",
     "discipline": "steeldarts",
-    "division": "District League Division 1",
-    "members": ["john-smith", "emma-davis", "jennifer-anderson"]
+    "division": "1. Liga West",
+    "members": [
+      "david-gerber",
+      "tran-chi-minh",
+      "stefano-scassa",
+      "marcos-de-la-fuente"
+    ]
   }
 ]
