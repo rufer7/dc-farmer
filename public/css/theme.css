@@ -393,16 +393,20 @@
   color: var(--color-text);
 }
 
-.sponsor-tier-gold {
+.sponsor-tier-main {
   border-color: #ffd700;
 }
 
-.sponsor-tier-silver {
+.sponsor-tier-shirt {
   border-color: #c0c0c0;
 }
 
-.sponsor-tier-bronze {
+.sponsor-tier-tournament {
   border-color: #cd7f32;
+}
+
+.sponsor-tier-board {
+  border-color: #8b4513;
 }
 
 /* News Teaser */

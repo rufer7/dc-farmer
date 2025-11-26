@@ -1,26 +1,10 @@
 [
   {
-    "id": "spring-open-2026",
-    "title": "Spring Open Tournament Announced",
-    "date": "2026-03-15",
-    "author": "Club Committee",
-    "tags": ["tournament", "announcement"],
-    "summary": "Our annual Spring Open returns with expanded brackets and new categories. Registration opens April 1st!"
-  },
-  {
-    "id": "season-results-2025",
-    "title": "Successful 2025 Season Wrap-Up",
-    "date": "2026-02-28",
-    "author": "Team Captain",
-    "tags": ["results", "recap"],
-    "summary": "Looking back at an amazing season with several podium finishes and strong team performances."
-  },
-  {
-    "id": "new-edarts-setup",
-    "title": "New E-Darts Equipment Installation",
-    "date": "2026-02-10",
-    "author": "Facility Manager",
-    "tags": ["facility", "equipment"],
-    "summary": "State-of-the-art electronic dartboards now installed in our clubhouse. Come try them out!"
+    "id": "bullshooter-swiss-championship-2025",
+    "title": "Bullshooter Schweizermeisterschaft",
+    "date": "2025-02-09",
+    "author": "Vorstand",
+    "tags": ["Turnier", "Ankündigung"],
+    "summary": "Der DC Farmer darf mit freuden die Schweizermeisterschaft vom Bullshooter mit dem Verband A.B.D.V.S. organisieren und durchführen. Diese wird in der Sporthalle Ortschwaben statt finden."
   }
 ]

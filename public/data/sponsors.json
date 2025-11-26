@@ -2,7 +2,7 @@
   {
     "id": "local-sports-bar",
     "name": "Local Sports Bar & Grill",
-    "tier": "gold",
+    "tier": "main",
     "website": "https://example.com/sportsbar",
     "logo": null,
     "since": "2020",
@@ -11,7 +11,7 @@
   {
     "id": "dart-equipment-co",
     "name": "Dart Equipment Co.",
-    "tier": "silver",
+    "tier": "shirt",
     "website": "https://example.com/dartequip",
     "logo": null,
     "since": "2022",
@@ -20,7 +20,7 @@
   {
     "id": "community-bank",
     "name": "Community Bank",
-    "tier": "silver",
+    "tier": "tournament",
     "website": "https://example.com/bank",
     "logo": null,
     "since": "2021",
@@ -29,7 +29,7 @@
   {
     "id": "pizza-place",
     "name": "Tony's Pizza",
-    "tier": "bronze",
+    "tier": "board",
     "website": "https://example.com/pizza",
     "logo": null,
     "since": "2023",

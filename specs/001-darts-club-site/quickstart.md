@@ -64,7 +64,7 @@ Article body paragraphs...
 ### Sponsors
 
 1. Edit `public/data/sponsors.json`.
-2. Confirm `tier` is one of `gold|silver|bronze`.
+2. Confirm `tier` is one of `main|shirt|tournament|board`.
 3. Provide `logo` WebP plus optional PNG fallback.
 
 ### Teams & Committee Roles

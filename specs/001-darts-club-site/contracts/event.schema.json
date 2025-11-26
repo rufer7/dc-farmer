@@ -20,7 +20,13 @@
     "description": { "type": "string", "maxLength": 500 },
     "type": {
       "type": "string",
-      "enum": ["training", "match", "tournament", "meeting", "social"]
+      "enum": [
+        "Training",
+        "Meisterschaftsspiel",
+        "Turnier",
+        "Hauptversammlung",
+        "Social"
+      ]
     },
     "teamIds": {
       "type": "array",
