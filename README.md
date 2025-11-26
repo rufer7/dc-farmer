@@ -34,7 +34,7 @@ A modern, mobile-first static website for DC Farmer darts club with:
 - **Team Pages**: Dedicated pages for E-Darts and Steel Darts teams
 - **Events & News**: Dynamic loading of upcoming events and latest news
 - **Member Directory**: Active, passive, and committee member listings
-- **Sponsor Showcase**: Tiered sponsor display (Gold, Silver, Bronze)
+- **Sponsor Showcase**: Tiered sponsor display (Main, Shirt, Tournament, Board)
 - **Accessibility**: WCAG 2.1 Level A compliant with keyboard navigation support
 - **Security**: Content Security Policy (CSP) headers, no inline scripts
 
